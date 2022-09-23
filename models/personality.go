@@ -6,4 +6,8 @@ type Personality struct {
 	History string `json:"history"`
 }
 
+func (Personality) TableName() string {
+	return "personality"
+}
+
 var Personalities []Personality
