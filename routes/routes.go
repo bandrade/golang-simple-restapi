@@ -13,6 +13,7 @@ func HandleResquest() {
 	r.HandleFunc("/", controllers.Home)
 	r.HandleFunc("/api/personalities/", controllers.AllPersonalities).Methods("Get")
 	r.HandleFunc("/api/personalities/{id}", controllers.FindPersonalityById).Methods("Get")
+	r.HandleFunc("/api/personalities/{id}", controllers.DeletePersonality).Methods("Delete")
 	r.HandleFunc("/api/personalities/", controllers.CreatePersonality).Methods("Post")
 	log.Fatal(http.ListenAndServe(":8000", r))
 }

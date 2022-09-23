@@ -71,6 +71,31 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Delete Personality",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/personalities/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"personalities",
+						"3"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
