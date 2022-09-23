@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "c840b753-d003-4183-a037-f637762478c9",
+		"name": "golang-simple-restapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find All Personalities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/personalities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"personalities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Personality by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/personalities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"personalities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Personality",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"teste\",\n    \"history\":\"teste\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/personalities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"personalities",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
