@@ -73,6 +73,31 @@
 			"response": []
 		},
 		{
+			"name": "Edit Personality",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"teste\",\n    \"history\":\"teste\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/personalities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"personalities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Delete Personality",
 			"request": {
 				"method": "DELETE",
