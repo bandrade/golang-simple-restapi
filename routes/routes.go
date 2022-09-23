@@ -6,6 +6,7 @@ import (
 
 	"github.com/bandrade/golang-simple-restapi/controllers"
 	"github.com/bandrade/golang-simple-restapi/middleware"
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -18,5 +19,5 @@ func HandleResquest() {
 	r.HandleFunc("/api/personalities/{id}", controllers.DeletePersonality).Methods("Delete")
 	r.HandleFunc("/api/personalities/{id}", controllers.EditPersonality).Methods("Put")
 	r.HandleFunc("/api/personalities/", controllers.CreatePersonality).Methods("Post")
-	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Fatal(http.ListenAndServe(":8000", handlers.CORS(handlers.AllowedOrigins([]string{"*"}))(r)))
 }
